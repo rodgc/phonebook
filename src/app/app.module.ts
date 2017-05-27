@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
+import { AppRoutingModule  } from './app.routing'
+
 import { AppComponent } from './app.component';
 import { ContactsComponent, ContactsService } from './contacts';
 import { PopularComponent } from './popular';
@@ -18,7 +20,8 @@ import { PopularComponent } from './popular';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule
+    MaterialModule,
+    AppRoutingModule
   ],
   providers: [
     ContactsService
