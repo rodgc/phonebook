@@ -1,0 +1,1 @@
+export { PopularComponent } from './popular.component';

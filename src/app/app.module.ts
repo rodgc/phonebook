@@ -5,10 +5,14 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { ContactsComponent, ContactsService } from './contacts';
+import { PopularComponent } from './popular';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactsComponent,
+    PopularComponent
   ],
   imports: [
     BrowserModule,
@@ -16,7 +20,9 @@ import { AppComponent } from './app.component';
     HttpModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [
+    ContactsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
