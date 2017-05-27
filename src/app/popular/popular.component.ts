@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IContact } from "../interfaces";
+import { ContactsService } from "../contacts";
 
 @Component({
   selector: 'app-popular',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./popular.component.scss']
 })
 export class PopularComponent implements OnInit {
-
-  constructor() { }
+  contacts: IContact[];
+  constructor(
+    private _contactsService: ContactsService
+  ) { }
 
   ngOnInit() {
+    this.contacts = this._contactsService.getContacts().slice(0,3);
   }
 
 }
