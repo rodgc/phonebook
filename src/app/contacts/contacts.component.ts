@@ -30,4 +30,8 @@ export class ContactsComponent implements OnInit {
     })
   }
 
+  delete(contact: IContact) {
+    this.contacts.splice(this.contacts.indexOf(contact), 1);
+  }
+
 }
